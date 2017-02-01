@@ -271,6 +271,7 @@ class Replicates(OpenRTM_aist.DataFlowComponentBase):
                 
 		if self._TLinIn.isNew():
 		    tmp = self._TLinIn.read()
+                    print(tmp.data)
 		    update_conf("tlin1", tmp.data)
 		    update_conf("tlin2", tmp.data*10)
 		    update_conf("tlin3", tmp.data*100)

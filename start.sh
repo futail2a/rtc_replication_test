@@ -1,5 +1,5 @@
 #!/bin/sh
-cd Reps_1.0.0/OtherComp
+cd /OtherComp
 python Replicates.py &
 cd ../Rep1
 python Replicates.py &

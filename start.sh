@@ -8,6 +8,6 @@ python Replicates.py &
 cd ../Rep3
 python Replicates.py &
 cd ../ 
-rtresurrect -x Conn_4.xml
-cd ../
-python main.py rtc_replication_test/Conn_4.xml
+rem rtresurrect -x test_replication.xml
+rem cd ../
+rem python main.py test_replication.xml

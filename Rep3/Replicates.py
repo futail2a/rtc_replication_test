@@ -352,7 +352,7 @@ class Replicates(OpenRTM_aist.DataFlowComponentBase):
 	#	return RTC.RTC_OK
 	
 def update_conf(param, new_val):
-    s = time.clock()
+#    s = time.clock()
     cmd = "rtconf localhost/Rep3.rtc set " + param +" " + str(new_val)
     
     p = Popen(cmd, shell=True, stdout=PIPE)
@@ -362,10 +362,10 @@ def update_conf(param, new_val):
             break
         print line.rstrip()
 
-    e = time.clock()
-    f = open('../../ExecutionTimeLog/Rep3_update_conf_time.txt', 'a')
-    f.write(str(param) + "," + str(e-s)+'\n')
-    f.close()
+#    e = time.clock()
+#    f = open('../../ExecutionTimeLog/Rep3_update_conf_time.txt', 'a')
+#    f.write(str(param) + "," + str(e-s)+'\n')
+#    f.close()
     
 
 def ReplicatesInit(manager):

@@ -271,7 +271,6 @@ class Replicates(OpenRTM_aist.DataFlowComponentBase):
                 
 		if self._TLinIn.isNew():
 		    tmp = self._TLinIn.read()
-                    print(tmp.data)
 		    update_conf("tlin1", tmp.data)
 		    update_conf("tlin2", tmp.data*10)
 		    update_conf("tlin3", tmp.data*100)
@@ -353,21 +352,19 @@ class Replicates(OpenRTM_aist.DataFlowComponentBase):
 	#	return RTC.RTC_OK
 	
 def update_conf(param, new_val):
-    s = time.clock()
-    #"""
+    #s = time.clock()
     cmd = "rtconf localhost/Rep1.rtc set " + param +" " + str(new_val)
-
+    #print(cmd)
     p = Popen(cmd, shell=True, stdout=PIPE)
     while True:
         line = p.stdout.readline()
         if not line:
             break
         print line.rstrip()
-
-    e = time.clock()
-    f = open('../../ExecutionTimeLog/Rep1_update_conf_time.txt', 'a')
-    f.write(str(param) + "," + str(e-s)+'\n')
-    f.close()
+    #e = time.clock()
+    #f = open('../../ExecutionTimeLog/Rep1_update_conf_time.txt', 'a')
+    #f.write(str(param) + "," + str(e-s)+'\n')
+    #f.close()
 
     """
     #Set observed nodes

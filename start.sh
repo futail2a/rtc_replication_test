@@ -10,4 +10,4 @@ python Replicates.py &
 cd ../ 
 rem rtresurrect -x test_replication.xml
 rem cd ../
-rem python main.py test_replication.xml
+rem python main.py rtc_replication_test/test_replication.xml
